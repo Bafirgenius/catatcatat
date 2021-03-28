@@ -1,6 +1,5 @@
-require("dotenv").config();
-const { PORT_ENV } = process.env;
 const express = require('express')
+const port = process.env.PORT || 4000
 const app = express()
 const session = require("express-session");
 require("./config/database");
@@ -18,4 +17,6 @@ app.use(session({
 }))
 app.use(routes)
 
-app.listen(PORT_ENV, console.log(`app running on port ${PORT_ENV}`))
+app.listen(port, () => {
+    console.log(`app running on port ${port}`)
+})
