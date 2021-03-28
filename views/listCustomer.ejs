@@ -1,0 +1,29 @@
+<%- include("partials/navbar" , {title : "list pembeli"}) %>
+    <div class="p-5" style="margin-top: 4rem;">
+        <table class="table">
+            <thead>
+              <tr>
+                <th scope="col">#</th>
+                <th scope="col">Nama</th>
+                <th scope="col">Tanggal</th>
+                <th scope="col">Option</th>
+              </tr>
+            </thead>
+            <tbody>
+                <% for (key in customers) { %>
+                    <tr>
+                      <th scope="row"><%= +key + 1 %> </th>
+                      <td><%= customers[key].name %></td>
+                      <td><%= customers[key].createdAt %> </td>
+                      <td>
+                        <a class="btn btn-primary mb-3" href="/detail/<%= customers[key].id %> " role="button">Detail</a>
+                        <a class="btn btn-primary mb-3" href="/edit/<%= customers[key].id %> " role="button">Edit</a>
+                        <a class="btn btn-primary mb-3" href="/delete/<%= customers[key].id %>" role="button">Delete</a>
+                      </td>
+                    </tr>
+               <% } %>
+            </tbody>
+          </table>
+    </div>
+</body>
+</html>

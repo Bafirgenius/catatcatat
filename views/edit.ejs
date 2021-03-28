@@ -1,0 +1,47 @@
+<%- include("partials/navbar" , {title : "edit data"}) %>
+
+<div class="p-5" style="margin-top: 4rem;">
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-md-4 ">
+                <div class="card">
+                    <div class="card-header catat">Edit Data</div>
+                    <div class="card-body">
+                        <form action="<%= customers.id %>" method="post">
+                            <div class="mb-6">
+                                <label for="name">Nama</label>
+                                <input type="text" name="name" id="name" class="form-control" value="<%= customers.name %> ">
+                            </div>
+                            <div class="mb-6">
+                                <label for="marketplace">Marketplace</label>
+                                <input type="text" name="marketplace" id="marketplace" class="form-control" value="<%= customers.marketplace %> ">
+                            </div>
+                            <div class="mb-6">
+                                <label for="number">No.Telepon</label>
+                                <input type="text" name="number" id="number" class="form-control" value="<%= customers.number %> ">
+                            </div>
+                            <div class="mb-6">
+                                <label for="size">Ukuran</label>
+                                <input type="text" name="size" id="size" class="form-control" value="<%= customers.size %> ">
+                            </div>
+                            <div class="mb-6">
+                                <label for="color">Warna</label>
+                                <input type="text" name="color" id="color" class="form-control" value="<%= customers.color %> ">
+                            </div>
+                            <div class="mb-6">
+                                <label for="amount">Jumlah Order</label>
+                                <input type="text" name="amount" id="amount" class="form-control" value="<%= customers.amount %> ">
+                            </div>
+                            <br>
+                            <button type="submit" class="btn btn-primary col-12">Update</button><br><br>
+                            <button type="reset" class="btn btn-primary col-12">reset</button><br><br>
+                            <a class="btn btn-primary col-12" href="/list " role="button">Kembali</a>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+</html>

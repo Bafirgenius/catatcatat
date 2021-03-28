@@ -1,0 +1,41 @@
+<%- include("partials/navbar" , {title : "detail list"}) %>
+<div class="p-5" style="margin-top: 4rem;">
+  <div class="md-5">
+    <h1>Detail Pembeli</h1>
+  </div>
+  <table class="table">
+    <tbody>
+      <tr>
+        <th>Nama</th>
+        <td><%= customers.name %> </td>
+      </tr>
+      <tr>
+        <th>Marketplace</th>
+        <td><%= customers.marketplace %> </td>
+      </tr>
+      <tr>
+        <th>No. Telepon</th>
+        <td><%= customers.number %> </td>
+      </tr>
+      <tr>
+        <th>Ukuran</th>
+        <td><%= customers.size %> </td>
+      </tr>
+      <tr>
+        <th>Warna</th>
+        <td><%= customers.color %> </td>
+      </tr>
+      <tr>
+        <th>Jumlah Order</th>
+        <td><%= customers.amount %> </td>
+      </tr>
+      <tr>
+        <th>Tanggal</th>
+        <td><%= customers.createdAt %> </td>
+      </tr>
+    </tbody>
+  </table>
+  <a class="btn btn-primary col-12" href="/list " role="button">Kembali</a>
+</div>
+</body>
+</html>
